@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html ng-app="main">
-  <head>
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-    <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-  </head>
-  <body class="container" ng-controller="StoreController as store">
-    <div>
-        <h1 class="pull-left">
-            This is the title
-        </h1>
-        <br></br>
-        
-    </div>
-    <div class="product row" ng-repeat="product in store.products">
-      <h3 class="nav nav-tabs">
-        {{product.name}}
-        <!--em class="pull-right">{{product.price | currency}}</em-->
-      </h3>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <title>Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>MyScheduler</h3>
+              <form name="TimeForm">
+
+              <!--  Review Form -->
+              <h4>Submit a Review</h4>
+              <fieldset class="form-group">
+                <select required>
+                  <option value="">Rate the Product</option>
+                </select>
+              </fieldset>
+              <fieldset class="form-group">
+                <textarea required></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <input required />
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+              </fieldset>
+            </form>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Calendar View</a></li>
+    <li><a href="#">List View</a></li>
+  </ul>
+  <br>
+</div>
+
+</body>
 </html>
+
